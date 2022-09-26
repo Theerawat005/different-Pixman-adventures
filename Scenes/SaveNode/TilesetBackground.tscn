@@ -1,0 +1,64 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://GFX/Background/background_1.png" type="Texture" id=1]
+[ext_resource path="res://GFX/Background/background_2.png" type="Texture" id=2]
+[ext_resource path="res://GFX/Background/background_3.png" type="Texture" id=3]
+[ext_resource path="res://GFX/Background/background_5.png" type="Texture" id=4]
+[ext_resource path="res://GFX/Background/background_6.png" type="Texture" id=5]
+[ext_resource path="res://GFX/Background/background_7.png" type="Texture" id=6]
+[ext_resource path="res://GFX/Background/background_8.png" type="Texture" id=7]
+[ext_resource path="res://GFX/Background/background_0.png" type="Texture" id=8]
+[ext_resource path="res://GFX/Background/background_4.png" type="Texture" id=9]
+[ext_resource path="res://GFX/Background/background_9.png" type="Texture" id=10]
+[ext_resource path="res://GFX/Background/background_10.png" type="Texture" id=11]
+[ext_resource path="res://GFX/Background/background_11.png" type="Texture" id=12]
+
+[node name="TilesetBackground" type="Node2D"]
+
+[node name="Background0" type="Sprite" parent="."]
+position = Vector2( 534, 140 )
+texture = ExtResource( 8 )
+
+[node name="Background1" type="Sprite" parent="."]
+position = Vector2( 534, 229 )
+texture = ExtResource( 1 )
+
+[node name="Background2" type="Sprite" parent="."]
+position = Vector2( 532, 315 )
+texture = ExtResource( 2 )
+
+[node name="Background3" type="Sprite" parent="."]
+position = Vector2( 442, 139 )
+texture = ExtResource( 3 )
+
+[node name="Background4" type="Sprite" parent="."]
+position = Vector2( 440, 229 )
+texture = ExtResource( 9 )
+
+[node name="Background5" type="Sprite" parent="."]
+position = Vector2( 440, 310 )
+texture = ExtResource( 4 )
+
+[node name="Background6" type="Sprite" parent="."]
+position = Vector2( 342, 138 )
+texture = ExtResource( 5 )
+
+[node name="Background7" type="Sprite" parent="."]
+position = Vector2( 340, 224 )
+texture = ExtResource( 6 )
+
+[node name="Background8" type="Sprite" parent="."]
+position = Vector2( 336, 306 )
+texture = ExtResource( 7 )
+
+[node name="Background9" type="Sprite" parent="."]
+position = Vector2( 238, 218 )
+texture = ExtResource( 10 )
+
+[node name="Background10" type="Sprite" parent="."]
+position = Vector2( 237, 297 )
+texture = ExtResource( 11 )
+
+[node name="Background11" type="Sprite" parent="."]
+position = Vector2( 237, 132 )
+texture = ExtResource( 12 )

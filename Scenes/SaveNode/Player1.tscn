@@ -1,0 +1,44 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://GFX/Charcter/player-0.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/SaveNode/Player1.gd" type="Script" id=2]
+[ext_resource path="res://GFX/Charcter/player-2.png" type="Texture" id=3]
+[ext_resource path="res://GFX/Charcter/player-3.png" type="Texture" id=4]
+[ext_resource path="res://GFX/Charcter/player-1.png" type="Texture" id=5]
+[ext_resource path="res://GFX/Charcter/player-4.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 28.0
+height = 34.0
+
+[node name="Player1" type="KinematicBody2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+animation = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 19 )
+shape = SubResource( 1 )

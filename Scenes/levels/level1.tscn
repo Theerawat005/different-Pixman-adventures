@@ -1,0 +1,108 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scenes/SaveNode/Player1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/SaveNode/Buttonmenupopup.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/SaveNode/popup_menu_game.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/SaveNode/coin.tscn" type="PackedScene" id=4]
+[ext_resource path="res://HUD/coin-1.png" type="Texture" id=5]
+[ext_resource path="res://Fonts/Fipps-Regular.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://Scenes/levels/HUD.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 906.75, 46.5 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 0.392157 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=3]
+size = 21
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+extra_spacing_char = 2
+font_data = ExtResource( 6 )
+
+[node name="level1" type="Node2D"]
+z_as_relative = false
+
+[node name="Player1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 299, 260 )
+
+[node name="Camera2D" type="Camera2D" parent="Player1"]
+current = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 949.25, 414 )
+shape = SubResource( 1 )
+
+[node name="coin" parent="." instance=ExtResource( 4 )]
+position = Vector2( 448, 327 )
+
+[node name="coin2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1686, 331 )
+
+[node name="menu_game" parent="." instance=ExtResource( 3 )]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 382.0
+margin_top = -1500.0
+margin_right = 638.0
+margin_bottom = -1180.0
+
+[node name="Tween" type="Tween" parent="menu_game"]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource( 7 )
+
+[node name="Button_menu_up" parent="HUD" instance=ExtResource( 2 )]
+anchor_left = 0.937
+anchor_right = 1.0
+anchor_bottom = 0.107
+margin_left = 0.511963
+margin_right = 0.0
+margin_bottom = -0.200005
+focus_mode = 1
+shortcut_in_tooltip = false
+enabled_focus_mode = 1
+stretch_mode = 2
+
+[node name="Panel" type="Panel" parent="HUD"]
+margin_right = 131.0
+margin_bottom = 63.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="cointext" type="TextureRect" parent="HUD"]
+anchor_right = 0.062
+anchor_bottom = 0.105
+margin_left = -1.0
+margin_top = -1.0
+margin_right = -0.488003
+texture = ExtResource( 5 )
+
+[node name="=" type="Label" parent="HUD"]
+margin_left = 59.0
+margin_right = 76.0
+margin_bottom = 64.0
+custom_colors/font_color = Color( 1, 0.654902, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "="
+align = 1
+valign = 1
+
+[node name="coins" type="Label" parent="HUD"]
+margin_left = 83.0
+margin_top = 5.0
+margin_right = 125.0
+margin_bottom = 63.0
+custom_colors/font_color = Color( 1, 0.654902, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "##"
+
+[connection signal="pressed" from="HUD/Button_menu_up" to="menu_game" method="_on_Button_menu_up_pressed"]
