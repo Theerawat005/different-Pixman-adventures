@@ -1,5 +1,6 @@
 extends Area2D
 
+signal coin_collected
 
 func _ready():
 	pass
@@ -8,7 +9,7 @@ func _ready():
 func _on_coin_body_entered(body):
 	$AnimationPlayer.play("die")
 	$AudioStreamPlayer.play()
-	body.add_coin()
+	emit_signal("coin_collected")
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):

@@ -42,12 +42,6 @@ current = true
 position = Vector2( 949.25, 414 )
 shape = SubResource( 1 )
 
-[node name="coin" parent="." instance=ExtResource( 4 )]
-position = Vector2( 448, 327 )
-
-[node name="coin2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1686, 331 )
-
 [node name="menu_game" parent="." instance=ExtResource( 3 )]
 anchor_left = 0.5
 anchor_right = 0.5
@@ -105,4 +99,14 @@ custom_colors/font_color = Color( 1, 0.654902, 0, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "##"
 
+[node name="coins" type="Node2D" parent="."]
+
+[node name="coin1" parent="coins" instance=ExtResource( 4 )]
+position = Vector2( 512, 320 )
+
+[node name="coin2" parent="coins" instance=ExtResource( 4 )]
+position = Vector2( 896, 320 )
+
 [connection signal="pressed" from="HUD/Button_menu_up" to="menu_game" method="_on_Button_menu_up_pressed"]
+[connection signal="coin_collected" from="coins/coin1" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="coins/coin2" to="HUD" method="_on_coin_collected"]
