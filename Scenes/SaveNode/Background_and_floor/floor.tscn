@@ -1,0 +1,339 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://GFX/Blockfloor/floor-33.png" type="Texture" id=1]
+[ext_resource path="res://GFX/Blockfloor/floor-6.png" type="Texture" id=2]
+[ext_resource path="res://GFX/Blockfloor/floor-8.png" type="Texture" id=3]
+[ext_resource path="res://GFX/Blockfloor/floor-30.png" type="Texture" id=4]
+[ext_resource path="res://GFX/Blockfloor/floor-31.png" type="Texture" id=5]
+[ext_resource path="res://GFX/Blockfloor/floor-5.png" type="Texture" id=6]
+[ext_resource path="res://GFX/Blockfloor/floor-7.png" type="Texture" id=7]
+[ext_resource path="res://GFX/Blockfloor/floor-32.png" type="Texture" id=8]
+[ext_resource path="res://GFX/Blockfloor/floor-34.png" type="Texture" id=9]
+[ext_resource path="res://GFX/Blockfloor/floor-35.png" type="Texture" id=10]
+[ext_resource path="res://GFX/Blockfloor/floor-36.png" type="Texture" id=11]
+[ext_resource path="res://GFX/Blockfloor/floor-29.png" type="Texture" id=12]
+[ext_resource path="res://GFX/Blockfloor/floor-13.png" type="Texture" id=13]
+[ext_resource path="res://GFX/Blockfloor/floor-16.png" type="Texture" id=14]
+[ext_resource path="res://GFX/Blockfloor/floor-18.png" type="Texture" id=15]
+[ext_resource path="res://GFX/Blockfloor/floor-21.png" type="Texture" id=16]
+[ext_resource path="res://GFX/Blockfloor/floor-2.png" type="Texture" id=17]
+[ext_resource path="res://GFX/Blockfloor/floor-14.png" type="Texture" id=18]
+[ext_resource path="res://GFX/Blockfloor/floor-10.png" type="Texture" id=19]
+[ext_resource path="res://GFX/Blockfloor/floor-15.png" type="Texture" id=20]
+[ext_resource path="res://GFX/Blockfloor/floor-1.png" type="Texture" id=21]
+[ext_resource path="res://GFX/Blockfloor/floor-3.png" type="Texture" id=22]
+[ext_resource path="res://GFX/Blockfloor/floor-11.png" type="Texture" id=23]
+[ext_resource path="res://GFX/Blockfloor/floor-17.png" type="Texture" id=24]
+[ext_resource path="res://GFX/Blockfloor/floor-22.png" type="Texture" id=25]
+[ext_resource path="res://GFX/Blockfloor/floor-4.png" type="Texture" id=26]
+[ext_resource path="res://GFX/Blockfloor/floor-23.png" type="Texture" id=27]
+[ext_resource path="res://GFX/Blockfloor/floor-24.png" type="Texture" id=28]
+[ext_resource path="res://GFX/Blockfloor/floor-25.png" type="Texture" id=29]
+[ext_resource path="res://GFX/Blockfloor/floor-26.png" type="Texture" id=30]
+[ext_resource path="res://GFX/Blockfloor/floor-27.png" type="Texture" id=31]
+[ext_resource path="res://GFX/Blockfloor/floor-28.png" type="Texture" id=32]
+[ext_resource path="res://GFX/Blockfloor/floor-19.png" type="Texture" id=33]
+[ext_resource path="res://GFX/Blockfloor/floor-20.png" type="Texture" id=34]
+[ext_resource path="res://GFX/Blockfloor/floor-9.png" type="Texture" id=35]
+[ext_resource path="res://GFX/Blockfloor/floor-12.png" type="Texture" id=36]
+
+[node name="floor" type="Node2D"]
+
+[node name="Floor-1" type="Sprite" parent="."]
+position = Vector2( 96, 32 )
+texture = ExtResource( 21 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-1"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-1/StaticBody2D"]
+polygon = PoolVector2Array( -32, -32, 32, -32, 32, 32, -32, 32 )
+
+[node name="Floor-2" type="Sprite" parent="."]
+position = Vector2( 224, 32 )
+texture = ExtResource( 17 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-2"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-2/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-3" type="Sprite" parent="."]
+position = Vector2( 352, 32 )
+texture = ExtResource( 22 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-3"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-3/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-4" type="Sprite" parent="."]
+position = Vector2( 480, 32 )
+texture = ExtResource( 26 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-4"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-4/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-5" type="Sprite" parent="."]
+position = Vector2( 96, 160 )
+texture = ExtResource( 6 )
+
+[node name="Floor-6" type="Sprite" parent="."]
+position = Vector2( 224, 160 )
+texture = ExtResource( 2 )
+
+[node name="Floor-7" type="Sprite" parent="."]
+position = Vector2( 352, 160 )
+texture = ExtResource( 7 )
+
+[node name="Floor-8" type="Sprite" parent="."]
+position = Vector2( 480, 160 )
+texture = ExtResource( 3 )
+
+[node name="Floor-9" type="Sprite" parent="."]
+position = Vector2( 96, 288 )
+texture = ExtResource( 35 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-9"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-9/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-10" type="Sprite" parent="."]
+position = Vector2( 224, 288 )
+texture = ExtResource( 19 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-10"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-10/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 40, -32, 40, 32 )
+
+[node name="Floor-11" type="Sprite" parent="."]
+position = Vector2( 352, 288 )
+texture = ExtResource( 23 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-11"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-11/StaticBody2D"]
+polygon = PoolVector2Array( -40, -32, 40, -32, 40, 32, -40, 32 )
+
+[node name="Floor-12" type="Sprite" parent="."]
+position = Vector2( 480, 288 )
+texture = ExtResource( 36 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-12"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-12/StaticBody2D"]
+polygon = PoolVector2Array( -40, -32, 32, -32, 32, 32, -40, 32 )
+
+[node name="Floor-13" type="Sprite" parent="."]
+position = Vector2( 96, 416 )
+texture = ExtResource( 13 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-13"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-13/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-14" type="Sprite" parent="."]
+position = Vector2( 224, 416 )
+texture = ExtResource( 18 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-14"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-14/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-15" type="Sprite" parent="."]
+position = Vector2( 352, 416 )
+texture = ExtResource( 20 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-15"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-15/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-16" type="Sprite" parent="."]
+position = Vector2( 480, 416 )
+texture = ExtResource( 14 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-16"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-16/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-17" type="Sprite" parent="."]
+position = Vector2( 96, 544 )
+texture = ExtResource( 24 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-17"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-17/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-18" type="Sprite" parent="."]
+position = Vector2( 224, 544 )
+texture = ExtResource( 15 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-18"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-18/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-19" type="Sprite" parent="."]
+position = Vector2( 352, 544 )
+texture = ExtResource( 33 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-19"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-19/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-20" type="Sprite" parent="."]
+position = Vector2( 480, 544 )
+texture = ExtResource( 34 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-20"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-20/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-21" type="Sprite" parent="."]
+position = Vector2( 96, 672 )
+texture = ExtResource( 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-21"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-21/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-22" type="Sprite" parent="."]
+position = Vector2( 224, 672 )
+texture = ExtResource( 25 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-22"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-22/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-23" type="Sprite" parent="."]
+position = Vector2( 352, 672 )
+texture = ExtResource( 27 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-23"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-23/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-24" type="Sprite" parent="."]
+position = Vector2( 480, 672 )
+texture = ExtResource( 28 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-24"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-24/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-25" type="Sprite" parent="."]
+position = Vector2( 96, 800 )
+texture = ExtResource( 29 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-25"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-25/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-26" type="Sprite" parent="."]
+position = Vector2( 224, 800 )
+texture = ExtResource( 30 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-26"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-26/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-27" type="Sprite" parent="."]
+position = Vector2( 352, 800 )
+texture = ExtResource( 31 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-27"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-27/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-28" type="Sprite" parent="."]
+position = Vector2( 480, 800 )
+texture = ExtResource( 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-28"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-28/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-29" type="Sprite" parent="."]
+position = Vector2( 96, 928 )
+texture = ExtResource( 12 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-29"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-29/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-30" type="Sprite" parent="."]
+position = Vector2( 224, 928 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-30"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-30/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-31" type="Sprite" parent="."]
+position = Vector2( 352, 928 )
+texture = ExtResource( 5 )
+
+[node name="Floor-32" type="Sprite" parent="."]
+position = Vector2( 480, 928 )
+texture = ExtResource( 8 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-32"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-32/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-33" type="Sprite" parent="."]
+position = Vector2( 96, 1056 )
+texture = ExtResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-33"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-33/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-34" type="Sprite" parent="."]
+position = Vector2( 224, 1056 )
+texture = ExtResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-34"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-34/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-35" type="Sprite" parent="."]
+position = Vector2( 352, 1056 )
+texture = ExtResource( 10 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-35"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-35/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )
+
+[node name="Floor-36" type="Sprite" parent="."]
+position = Vector2( 480, 1056 )
+texture = ExtResource( 11 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor-36"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor-36/StaticBody2D"]
+polygon = PoolVector2Array( -32, 32, -32, -32, 32, -32, 32, 32 )

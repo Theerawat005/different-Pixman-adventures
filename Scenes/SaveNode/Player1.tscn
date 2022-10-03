@@ -42,3 +42,15 @@ animation = "idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 19 )
 shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 1.15, 1.15 )
+limit_left = -255
+limit_top = -1000
+limit_bottom = 650
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+drag_margin_left = 0.3
+drag_margin_right = 0.3
+editor_draw_limits = true

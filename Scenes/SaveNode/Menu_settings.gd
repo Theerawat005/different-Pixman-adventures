@@ -4,8 +4,7 @@ export(String) var label
 export(String) var bus_name
 export(NodePath) var audio_stream_player_path
 
-onready var HMusic = $TextureButton/Music_HScrollBar
-onready var tween = $"../Tween1"
+onready var HMusic = $TextMusic/Music_HScrollBar
 
 var audio_stream_player : AudioStreamPlayer
 

@@ -1,0 +1,135 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scenes/SaveNode/Menu_settings.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/SaveNode/popup_menu_game.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/Fipps-Regular.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://GFX/Button/Button-3.png" type="Texture" id=4]
+[ext_resource path="res://GFX/Button/popup-2.png" type="Texture" id=5]
+[ext_resource path="res://GFX/Button/Button-4.png" type="Texture" id=6]
+[ext_resource path="res://SFX/Summer_Park.ogg" type="AudioStream" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 15
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 19
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 19
+font_data = ExtResource( 3 )
+
+[node name="menu_game" type="CenterContainer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+script = ExtResource( 2 )
+
+[node name="Popup" type="TextureRect" parent="."]
+margin_left = 384.0
+margin_top = 140.0
+margin_right = 640.0
+margin_bottom = 460.0
+texture = ExtResource( 5 )
+
+[node name="Menu_settings" type="VBoxContainer" parent="."]
+margin_left = 416.0
+margin_top = 166.0
+margin_right = 608.0
+margin_bottom = 433.0
+script = ExtResource( 1 )
+label = "Musin"
+bus_name = "Musin"
+audio_stream_player_path = NodePath("../Music")
+
+[node name="Menu_text" type="Label" parent="Menu_settings"]
+margin_right = 192.0
+margin_bottom = 63.0
+custom_colors/font_color = Color( 0.133333, 0.133333, 0.133333, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "MENU"
+align = 1
+valign = 1
+
+[node name="TextMusic" type="TextureRect" parent="Menu_settings"]
+margin_top = 67.0
+margin_right = 192.0
+margin_bottom = 131.0
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Menu_settings/TextMusic"]
+anchor_left = 0.042
+anchor_right = 0.964
+anchor_bottom = 1.0
+margin_left = -0.0640001
+margin_top = 4.0
+margin_right = -0.0880127
+margin_bottom = -21.0
+custom_colors/font_color = Color( 0.133333, 0.133333, 0.133333, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "MUSIC"
+align = 1
+valign = 1
+
+[node name="Music_HScrollBar" type="HSlider" parent="Menu_settings/TextMusic"]
+anchor_top = 0.547
+anchor_right = 1.0
+anchor_bottom = 0.844
+margin_left = 7.0
+margin_top = -0.00800323
+margin_right = -7.0
+margin_bottom = -0.0160027
+min_value = -68.0
+max_value = 0.0
+
+[node name="ButtonMain_menu" type="TextureButton" parent="Menu_settings"]
+margin_top = 135.0
+margin_right = 192.0
+margin_bottom = 199.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="Menu_settings/ButtonMain_menu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 7.0
+margin_top = 10.0
+margin_right = -8.0
+margin_bottom = -5.0
+custom_colors/font_color = Color( 0.133333, 0.133333, 0.133333, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "CLOSE"
+align = 1
+valign = 1
+
+[node name="homeButton" type="TextureButton" parent="Menu_settings"]
+margin_top = 203.0
+margin_right = 192.0
+margin_bottom = 267.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="Menu_settings/homeButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 8.0
+custom_colors/font_color = Color( 0.133333, 0.133333, 0.133333, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "HOME"
+align = 1
+valign = 1
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
+bus = "Music"
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="value_changed" from="Menu_settings/TextMusic/Music_HScrollBar" to="Menu_settings" method="_on_Music_HScrollBar_value_changed"]
+[connection signal="pressed" from="Menu_settings/ButtonMain_menu" to="." method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="Menu_settings/homeButton" to="." method="_on_homeButton_pressed"]

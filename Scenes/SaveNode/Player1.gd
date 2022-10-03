@@ -16,30 +16,30 @@ func _ready():
 	pass
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	_jump()
 	_move()
 	#Update position
-	move_and_slide(motion, UP)
+	motion = move_and_slide(motion, UP)
 	apply_gravity()
 	animate()
 	
-	if coins == 2:
-		get_tree().change_scene("res://Scenes/levels/menu.tscn")
-
 
 func apply_gravity():
 	#Check if the player is on the floor
 	#if not apply gravity 
 	if is_on_floor():
 		motion.y = 0
+		countjump = 0
 	else:
 		motion.y += GRAVITY
 
 
 func _jump():
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") and countjump <2:
 		motion.y -= JUMP_POWER
+		countjump  += 1
+
 
 func _move():
 	if Input.is_action_pressed("left") and not Input.is_action_pressed("right"):
@@ -66,4 +66,3 @@ func animate():
 
 func add_coin():
 	coins = coins + 1
-
