@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://GFX/Tileset/floor/floorblock.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/SaveNode/Player1.tscn" type="PackedScene" id=2]
@@ -22,7 +22,9 @@
 [ext_resource path="res://Scenes/SaveNode/Background_and_floor/Water.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Scenes/levels/fallzone.gd" type="Script" id=21]
 [ext_resource path="res://GFX/Tileset/water.tres" type="TileSet" id=22]
-[ext_resource path="res://Scenes/levels/mobs.gd" type="Script" id=23]
+[ext_resource path="res://Scenes/SaveNode/Mob/mobspike.tscn" type="PackedScene" id=23]
+[ext_resource path="res://GFX/Button/Buttonbrick-1.png" type="Texture" id=24]
+[ext_resource path="res://GFX/Button/Buttonbrick-2.png" type="Texture" id=25]
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 1844.31, 15.25 )
@@ -39,6 +41,12 @@ font_data = ExtResource( 7 )
 [sub_resource type="DynamicFont" id=3]
 size = 20
 font_data = ExtResource( 7 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 61, 164.5 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 128, 12.5 )
 
 [node name="level1" type="Node2D"]
 
@@ -134,43 +142,6 @@ margin_top = -1.0
 margin_right = -0.488003
 texture = ExtResource( 5 )
 
-[node name="Control" type="Control" parent="HUD"]
-anchor_top = 0.738
-anchor_right = 1.178
-anchor_bottom = 1.0
-margin_top = -3.05176e-05
-margin_right = -0.00012207
-
-[node name="move_right" type="TouchScreenButton" parent="HUD/Control"]
-position = Vector2( 195, -4 )
-scale = Vector2( 2.09375, 2.09375 )
-normal = ExtResource( 8 )
-pressed = ExtResource( 9 )
-action = "right"
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="jump" type="TouchScreenButton" parent="HUD/Control"]
-position = Vector2( 1050, 2 )
-scale = Vector2( 2, 2 )
-normal = ExtResource( 12 )
-pressed = ExtResource( 13 )
-action = "jump"
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="move_left" type="TouchScreenButton" parent="HUD/Control"]
-position = Vector2( 34, -4.99997 )
-scale = Vector2( 2.10938, 2.10938 )
-normal = ExtResource( 10 )
-pressed = ExtResource( 11 )
-action = "left"
-__meta__ = {
-"_edit_lock_": true
-}
-
 [node name="lable" type="Control" parent="HUD"]
 margin_left = -1.0
 margin_top = -1.0
@@ -246,13 +217,60 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Control" type="Control" parent="HUD"]
+anchor_top = 0.738
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="move_right" type="TouchScreenButton" parent="HUD/Control"]
+position = Vector2( 195, -4 )
+scale = Vector2( 2.09375, 2.09375 )
+normal = ExtResource( 8 )
+pressed = ExtResource( 9 )
+action = "right"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="jump" type="TouchScreenButton" parent="HUD/Control"]
+position = Vector2( 880, 23 )
+scale = Vector2( 1.5, 1.5 )
+normal = ExtResource( 12 )
+pressed = ExtResource( 13 )
+action = "jump"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="move_left" type="TouchScreenButton" parent="HUD/Control"]
+position = Vector2( 34, -4.99997 )
+scale = Vector2( 2.10938, 2.10938 )
+normal = ExtResource( 10 )
+pressed = ExtResource( 11 )
+action = "left"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="shootbrick" type="TouchScreenButton" parent="HUD/Control"]
+position = Vector2( 752, 23 )
+scale = Vector2( 1.5, 1.5 )
+normal = ExtResource( 24 )
+pressed = ExtResource( 25 )
+action = "brick"
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="flagwin" parent="." instance=ExtResource( 15 )]
 position = Vector2( -120, -544 )
 frame = 0
-win = "11"
+win = "8"
 
 [node name="mobs" type="Node2D" parent="."]
-script = ExtResource( 23 )
 
 [node name="mobsmini" parent="mobs" instance=ExtResource( 16 )]
 position = Vector2( 608, -768 )
@@ -278,14 +296,21 @@ position = Vector2( 1992, 432 )
 [node name="mobsmini8" parent="mobs" instance=ExtResource( 16 )]
 position = Vector2( 552, 328 )
 
-[node name="mobsmini9" parent="mobs" instance=ExtResource( 16 )]
-position = Vector2( 2744, -704 )
-
 [node name="mobsmini10" parent="mobs" instance=ExtResource( 16 )]
 position = Vector2( 3936, -768 )
 
-[node name="mobsmini11" parent="mobs" instance=ExtResource( 16 )]
-position = Vector2( 5336, -608 )
+[node name="mobspike" parent="mobs" instance=ExtResource( 23 )]
+position = Vector2( 2976, -672 )
+
+[node name="mobspike2" parent="mobs" instance=ExtResource( 23 )]
+position = Vector2( 5480, -568 )
+
+[node name="Area" type="Area2D" parent="mobs"]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mobs/Area"]
+position = Vector2( 3272, -731.5 )
+shape = SubResource( 5 )
 
 [node name="platform" type="Node2D" parent="."]
 
@@ -301,37 +326,42 @@ position = Vector2( 5976, -256 )
 [node name="allcoin" type="Node2D" parent="."]
 position = Vector2( 6184, -688 )
 
-[node name="coin7" parent="allcoin" instance=ExtResource( 19 )]
-position = Vector2( -6152, 112 )
-
-[node name="coin8" parent="allcoin" instance=ExtResource( 19 )]
-position = Vector2( -5464, -168 )
-
-[node name="coin9" parent="allcoin" instance=ExtResource( 19 )]
-position = Vector2( -4528, 72 )
-
-[node name="coin10" parent="allcoin" instance=ExtResource( 19 )]
-position = Vector2( -1616, -144 )
-
-[node name="coin11" parent="allcoin" instance=ExtResource( 19 )]
-
 [node name="coin" parent="allcoin" instance=ExtResource( 19 )]
-position = Vector2( -584, 552 )
+position = Vector2( -600, 512 )
 
 [node name="coin2" parent="allcoin" instance=ExtResource( 19 )]
-position = Vector2( -1952, 416 )
+position = Vector2( -2440, 528 )
 
 [node name="coin3" parent="allcoin" instance=ExtResource( 19 )]
-position = Vector2( -2920, 568 )
+position = Vector2( -5560, 1072 )
 
 [node name="coin4" parent="allcoin" instance=ExtResource( 19 )]
-position = Vector2( -3592, 792 )
+position = Vector2( -3664, 776 )
 
 [node name="coin5" parent="allcoin" instance=ExtResource( 19 )]
-position = Vector2( -4360, 784 )
+position = Vector2( -1584, -80 )
 
 [node name="coin6" parent="allcoin" instance=ExtResource( 19 )]
-position = Vector2( -5504, 1040 )
+position = Vector2( -3520, -8 )
+
+[node name="coin7" parent="allcoin" instance=ExtResource( 19 )]
+position = Vector2( -4480, 40 )
+
+[node name="Area" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
+position = Vector2( 6080, -493.5 )
+shape = SubResource( 6 )
 
 [connection signal="body_entered" from="fallzone" to="fallzone" method="_on_fallzone_body_entered"]
 [connection signal="pressed" from="HUD/Buttonmenu" to="HUD/menu_game" method="_on_Buttonmenu_pressed"]
+[connection signal="body_entered" from="mobs/Area" to="mobs/mobspike" method="_on_Area_body_entered"]
+[connection signal="coin_collected" from="allcoin/coin" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="allcoin/coin2" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="allcoin/coin3" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="allcoin/coin4" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="allcoin/coin5" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="allcoin/coin6" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="coin_collected" from="allcoin/coin7" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="body_entered" from="Area" to="mobs/mobspike2" method="_on_Area_body_entered"]

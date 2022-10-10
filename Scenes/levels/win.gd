@@ -9,4 +9,4 @@ func _on_ButtonQuit_pressed():
 	get_tree().quit()
 
 func _on_ButtonRestart_pressed():
-	return get_tree().change_scene("res://Scenes/levels/Tutorial.tscn")
+	return get_tree().change_scene("res://Scenes/levels/Level1.tscn")

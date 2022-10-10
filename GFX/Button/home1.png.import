@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/character_0013.png-916febf0d675b6d5750735b4878c99b8.stex"
+path="res://.import/home1.png-b2564f6eaeb8b849c89e35e5e7646a39.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GFX/Charcter/character_0013.png"
-dest_files=[ "res://.import/character_0013.png-916febf0d675b6d5750735b4878c99b8.stex" ]
+source_file="res://GFX/Button/home1.png"
+dest_files=[ "res://.import/home1.png-b2564f6eaeb8b849c89e35e5e7646a39.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/character_0016.png-d14c8c1c6af77adcb16a98957824aada.stex"
+path="res://.import/boxman0.png-eb8ee8c196b69b88754c29bf37d90ffe.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GFX/Charcter/character_0016.png"
-dest_files=[ "res://.import/character_0016.png-d14c8c1c6af77adcb16a98957824aada.stex" ]
+source_file="res://GFX/Charcter/boxman0.png"
+dest_files=[ "res://.import/boxman0.png-eb8ee8c196b69b88754c29bf37d90ffe.stex" ]
 
 [params]
 

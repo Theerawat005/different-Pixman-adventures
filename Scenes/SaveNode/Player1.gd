@@ -9,8 +9,10 @@ export var GRAVITY = 25
 export var JUMP_POWER = 520
 
 const UP = Vector2(0,-1)
+const Brick = preload("res://Scenes/SaveNode/Item/Brick.tscn")
 
 onready var anima = $AnimatedSprite
+onready var audiojump = $Audio_jump
 
 func _ready():
 	pass
@@ -19,6 +21,7 @@ func _ready():
 func _physics_process(_delta):
 	_jump()
 	_move()
+	brick()
 	#Update position
 	motion = move_and_slide(motion, UP)
 	apply_gravity()
@@ -66,3 +69,13 @@ func animate():
 
 func add_coin():
 	coins = coins + 1
+
+
+func brick():
+	if Input.is_action_just_pressed("brick"):
+		var direction = 1 if not anima.flip_h else -1
+		var b = Brick.instance()
+		b.direction = direction
+		get_parent().add_child(b)
+		b.position.y = position.y
+		b.position.x = position.x + 25 * direction

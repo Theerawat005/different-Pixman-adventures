@@ -10,7 +10,7 @@ func _ready():
 
 func _on_Area2D_body_entered(_body):
 	if String(coins) >= String(win):
-		return get_tree().change_scene("res://Scenes/levels/win.tscn")	
+		return get_tree().change_scene("res://Scenes/levels/Level1.tscn")	
 	else:
 		pass
 

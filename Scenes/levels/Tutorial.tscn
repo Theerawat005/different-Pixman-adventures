@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://GFX/Tileset/material.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/levels/fallzone.gd" type="Script" id=2]
@@ -24,9 +24,116 @@
 [ext_resource path="res://GFX/Button/letf-2.png" type="Texture" id=22]
 [ext_resource path="res://GFX/Button/jump-1.png" type="Texture" id=23]
 [ext_resource path="res://GFX/Button/jump-2.png" type="Texture" id=24]
+[ext_resource path="res://Scenes/SaveNode/Item/Spikes.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Scenes/SaveNode/Mob/mobspike.tscn" type="PackedScene" id=26]
+[ext_resource path="res://GFX/Button/Buttonbrick-1.png" type="Texture" id=27]
+[ext_resource path="res://GFX/Button/Buttonbrick-2.png" type="Texture" id=28]
+[ext_resource path="res://Fonts/8-bit-pusab.ttf" type="DynamicFontData" id=29]
+[ext_resource path="res://GFX/material/spikes.png" type="Texture" id=30]
+[ext_resource path="res://GFX/Charcter/mobspike.png" type="Texture" id=31]
+[ext_resource path="res://GFX/Charcter/mobspike-2.png" type="Texture" id=32]
+[ext_resource path="res://GFX/Charcter/mods-1.png" type="Texture" id=33]
+[ext_resource path="res://GFX/Charcter/mods-2.png" type="Texture" id=34]
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 256.625, 15.25 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0, 0, 0, 0.517647 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.5
+} ]
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ ExtResource( 17 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.5
+} ]
+
+[sub_resource type="DynamicFont" id=13]
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 10
+font_data = ExtResource( 29 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 10
+font_data = ExtResource( 29 )
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0, 0, 0, 0.517647 )
+
+[sub_resource type="DynamicFont" id=17]
+font_data = ExtResource( 29 )
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0, 0, 0, 0.517647 )
+
+[sub_resource type="DynamicFont" id=19]
+font_data = ExtResource( 29 )
+
+[sub_resource type="SpriteFrames" id=20]
+animations = [ {
+"frames": [ ExtResource( 23 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.5
+} ]
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0, 0, 0, 0.517647 )
+
+[sub_resource type="DynamicFont" id=22]
+font_data = ExtResource( 29 )
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 0, 0, 0, 0.517647 )
+
+[sub_resource type="SpriteFrames" id=24]
+animations = [ {
+"frames": [ ExtResource( 33 ), ExtResource( 34 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.5
+} ]
+
+[sub_resource type="DynamicFont" id=25]
+font_data = ExtResource( 29 )
+
+[sub_resource type="StyleBoxFlat" id=26]
+bg_color = Color( 0, 0, 0, 0.517647 )
+
+[sub_resource type="SpriteFrames" id=27]
+animations = [ {
+"frames": [ ExtResource( 32 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.5
+} ]
+
+[sub_resource type="DynamicFont" id=28]
+size = 10
+font_data = ExtResource( 29 )
+
+[sub_resource type="SpriteFrames" id=29]
+animations = [ {
+"frames": [ ExtResource( 27 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.5
+} ]
+
+[sub_resource type="DynamicFont" id=30]
+size = 10
+font_data = ExtResource( 29 )
 
 [sub_resource type="Animation" id=6]
 length = 0.001
@@ -73,6 +180,9 @@ font_data = ExtResource( 15 )
 size = 20
 font_data = ExtResource( 15 )
 
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 20, 88 )
+
 [node name="Tutorial" type="Node2D"]
 z_as_relative = false
 
@@ -98,7 +208,7 @@ tile_data = PoolIntArray( -262060, 9, 0, -262059, 10, 0, -262058, 11, 0, -196524
 tile_set = ExtResource( 1 )
 collision_layer = 16
 format = 1
-tile_data = PoolIntArray( -393129, 1073741834, 0, -393128, 1073741835, 0, -393127, 1073741835, 0, -393126, 1073741836, 0, -327628, 1073741834, 0, -327627, 1073741835, 0, -327626, 1073741836, 0, -262134, 1073741834, 0, -262133, 1073741835, 0, -262132, 1073741836, 0, -262039, 1073741834, 0, -262038, 1073741835, 0, -262037, 1073741836, 0, -131076, 536870918, 0, -131074, 536870918, 0, -196579, 1073741834, 0, -196578, 1073741835, 0, -196577, 1073741836, 0, -196544, 1073741834, 0, -196543, 1073741835, 0, -196542, 1073741835, 0, -196541, 1073741835, 0, -196540, 1073741836, 0, -196513, 1073741834, 0, -196512, 1073741836, 0, -131028, 1073741834, 0, -131027, 1073741835, 0, -131026, 1073741835, 0, -131025, 1073741836, 0, -130990, 2, 0, -130989, 9, 0, -130988, 8, 0, -130987, 9, 0, -130986, 4, 0, -130985, 0, 0, -130984, 536870914, 0, -65518, 1073741834, 0, -65517, 1073741835, 0, -65516, 1073741835, 0, -65515, 1073741836, 0, 5, 1073741834, 0, 6, 1073741836, 0, 46, 0, 0, 47, 2, 0, 76, 1073741834, 0, 77, 1073741835, 0, 78, 1073741836, 0, 110, 1073741834, 0, 111, 1073741835, 0, 112, 1073741835, 0, 65626, 8, 0, 65627, 5, 0, 65628, 2, 0, 131111, 536870914, 0, 131113, 536870921, 0, 131114, 4, 0, 131115, 536870921, 0, 131116, 3, 0, 131117, 2, 0, 131128, 1073741834, 0, 131129, 1073741835, 0, 131130, 1073741836, 0, 327703, 536870920, 0, 327704, 0, 0, 327705, 536870914, 0, 327707, 4, 0, 327710, 2, 0, 327711, 536870914, 0, 327712, 536870921, 0, 327713, 536870920, 0, 327717, 536870915, 0, 327776, 536870914, 0, 458751, 536870914, 0, 393217, 536870920, 0, 393218, 536870921, 0, 393219, 536870915, 0, 393220, 536870921, 0, 393221, 2, 0, 393223, 536870921, 0, 393224, 536870921, 0, 393226, 536870914, 0, 393228, 536870921, 0, 393229, 536870920, 0, 393230, 536870920, 0, 393231, 536870913, 0, 393232, 536870914, 0, 393275, 0, 0, 393276, 536870921, 0, 393277, 536870920, 0, 393278, 536870920, 0, 393279, 536870919, 0, 393280, 536870921, 0, 458817, 536870914, 0, 458818, 2, 0, 458819, 4, 0, 458823, 536870915, 0, 458824, 2, 0, 458825, 536870921, 0, 458826, 536870920, 0, 458827, 536870913, 0, 458830, 5, 0, 458832, 2, 0, 524344, 4, 0, 524345, 536870921, 0, 524346, 536870921, 0 )
+tile_data = PoolIntArray( -393129, 1073741834, 0, -393128, 1073741835, 0, -393127, 1073741835, 0, -393126, 1073741836, 0, -327628, 1073741834, 0, -327627, 1073741835, 0, -327626, 1073741836, 0, -262134, 1073741834, 0, -262133, 1073741835, 0, -262132, 1073741836, 0, -262039, 1073741834, 0, -262038, 1073741835, 0, -262037, 1073741836, 0, -131076, 536870918, 0, -131074, 536870918, 0, -196579, 1073741834, 0, -196578, 1073741835, 0, -196577, 1073741836, 0, -196544, 1073741834, 0, -196543, 1073741835, 0, -196542, 1073741835, 0, -196541, 1073741835, 0, -196540, 1073741836, 0, -196513, 1073741834, 0, -196512, 1073741836, 0, -131028, 1073741834, 0, -131027, 1073741835, 0, -131026, 1073741835, 0, -131025, 1073741836, 0, -130990, 2, 0, -130989, 9, 0, -130988, 8, 0, -130987, 9, 0, -130986, 4, 0, -130985, 0, 0, -130984, 536870914, 0, -65518, 1073741834, 0, -65517, 1073741835, 0, -65516, 1073741835, 0, -65515, 1073741836, 0, 5, 1073741834, 0, 6, 1073741836, 0, 46, 0, 0, 47, 2, 0, 76, 1073741834, 0, 77, 1073741835, 0, 78, 1073741836, 0, 110, 1073741834, 0, 111, 1073741835, 0, 112, 1073741835, 0, 65626, 8, 0, 65627, 5, 0, 65628, 2, 0, 131111, 536870914, 0, 131113, 536870921, 0, 131114, 4, 0, 131115, 536870921, 0, 131116, 3, 0, 131117, 2, 0, 131128, 1073741834, 0, 131129, 1073741835, 0, 131130, 1073741836, 0, 327703, 536870920, 0, 327704, 0, 0, 327705, 536870914, 0, 327707, 4, 0, 327712, 536870921, 0, 327713, 536870920, 0, 327717, 536870915, 0, 327776, 536870914, 0, 458751, 536870914, 0, 393217, 536870920, 0, 393218, 536870921, 0, 393219, 536870915, 0, 393220, 536870921, 0, 393221, 2, 0, 393223, 536870921, 0, 393224, 536870921, 0, 393226, 536870914, 0, 393228, 536870921, 0, 393229, 536870920, 0, 393230, 536870920, 0, 393231, 536870913, 0, 393232, 536870914, 0, 393275, 0, 0, 393276, 536870921, 0, 393277, 536870920, 0, 393278, 536870920, 0, 393279, 536870919, 0, 393280, 536870921, 0, 458817, 536870914, 0, 458818, 2, 0, 458819, 4, 0, 458823, 536870915, 0, 458824, 2, 0, 458825, 536870921, 0, 458826, 536870920, 0, 458827, 536870913, 0, 458830, 5, 0, 458832, 2, 0, 524344, 4, 0, 524345, 536870921, 0, 524346, 536870921, 0 )
 
 [node name="FallZoneNode" type="Node2D" parent="."]
 
@@ -182,6 +292,178 @@ tile_set = ExtResource( 5 )
 format = 1
 tile_data = PoolIntArray( 655377, 0, 0, 655378, 0, 0, 655379, 0, 0, 655380, 0, 0, 655381, 0, 0, 655382, 0, 0, 720913, 0, 0, 720914, 0, 0, 720915, 0, 0, 720916, 0, 0, 720917, 0, 0, 720918, 0, 0, 720944, 0, 0, 720945, 0, 0, 720946, 0, 0, 720947, 0, 0, 720948, 0, 0, 720949, 0, 0, 720950, 0, 0, 720951, 0, 0 )
 
+[node name="clickbutton" type="Panel" parent="."]
+margin_left = -48.0
+margin_top = 96.0
+margin_right = 360.0
+margin_bottom = 296.0
+custom_styles/panel = SubResource( 10 )
+
+[node name="Animamoveletf" type="AnimatedSprite" parent="clickbutton"]
+position = Vector2( 40, 80 )
+frames = SubResource( 11 )
+playing = true
+
+[node name="Animamoveright" type="AnimatedSprite" parent="clickbutton"]
+position = Vector2( 40, 144 )
+frames = SubResource( 12 )
+playing = true
+
+[node name="Tutorial" type="Label" parent="clickbutton"]
+anchor_right = 1.0
+anchor_bottom = 0.21
+margin_bottom = -0.0400009
+custom_fonts/font = SubResource( 13 )
+text = "TUTORIAL"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="clickbutton"]
+anchor_top = 0.286
+anchor_right = 1.0
+anchor_bottom = 0.464
+margin_left = 80.0
+margin_top = -0.064003
+margin_right = -216.0
+margin_bottom = 0.0639954
+custom_fonts/font = SubResource( 14 )
+text = "Click on the button to move letf."
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="clickbutton"]
+anchor_left = -0.02
+anchor_top = 0.607
+anchor_right = 1.0
+anchor_bottom = 0.786
+margin_left = 88.16
+margin_top = 0.0319824
+margin_right = -32.0
+margin_bottom = -0.0639954
+custom_fonts/font = SubResource( 15 )
+text = "Click on the button to move right."
+align = 1
+valign = 1
+
+[node name="collectcoin" type="Panel" parent="."]
+margin_left = 576.0
+margin_top = 176.0
+margin_right = 768.0
+margin_bottom = 336.0
+custom_styles/panel = SubResource( 16 )
+
+[node name="Label" type="Label" parent="collectcoin"]
+margin_top = 9.0
+margin_right = 192.0
+margin_bottom = 153.0
+custom_fonts/font = SubResource( 17 )
+text = "You have to collect all the coins to pass."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="jump" type="Panel" parent="."]
+margin_left = 1040.0
+margin_top = 320.0
+margin_right = 1408.0
+margin_bottom = 384.0
+custom_styles/panel = SubResource( 18 )
+
+[node name="Label" type="Label" parent="jump"]
+margin_left = 64.0
+margin_top = 8.0
+margin_right = 376.0
+margin_bottom = 56.0
+custom_fonts/font = SubResource( 19 )
+text = "You can double jump."
+align = 1
+valign = 1
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="jump"]
+position = Vector2( 32, 32 )
+frames = SubResource( 20 )
+playing = true
+
+[node name="spikes" type="Panel" parent="."]
+margin_left = 1696.0
+margin_top = 192.0
+margin_right = 2144.0
+margin_bottom = 288.0
+custom_styles/panel = SubResource( 21 )
+
+[node name="Spikes" type="Sprite" parent="spikes"]
+position = Vector2( 40, 32 )
+texture = ExtResource( 30 )
+
+[node name="Label" type="Label" parent="spikes"]
+margin_left = 80.0
+margin_right = 448.0
+margin_bottom = 96.0
+custom_fonts/font = SubResource( 22 )
+text = "This is a spike and I advise you not to touch it."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="mini" type="Panel" parent="."]
+margin_left = 3536.0
+margin_top = 232.0
+margin_right = 3928.0
+margin_bottom = 344.0
+custom_styles/panel = SubResource( 23 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="mini"]
+position = Vector2( 48, 32 )
+frames = SubResource( 24 )
+frame = 1
+playing = true
+
+[node name="Label" type="Label" parent="mini"]
+margin_left = 112.0
+margin_top = 24.0
+margin_right = 368.0
+margin_bottom = 96.0
+custom_fonts/font = SubResource( 25 )
+text = "This is a mini, you can step on it."
+autowrap = true
+
+[node name="mospike" type="Panel" parent="."]
+margin_left = 6480.0
+margin_top = 152.0
+margin_right = 6792.0
+margin_bottom = 296.0
+custom_styles/panel = SubResource( 26 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="mospike"]
+position = Vector2( 32, 32 )
+frames = SubResource( 27 )
+frame = 1
+playing = true
+
+[node name="Label" type="Label" parent="mospike"]
+margin_left = 64.0
+margin_top = 24.0
+margin_right = 304.0
+margin_bottom = 72.0
+custom_fonts/font = SubResource( 28 )
+text = "This is mospike, don't step on it. But you can shoot it."
+autowrap = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="mospike"]
+position = Vector2( 32, 104 )
+scale = Vector2( 0.75, 0.75 )
+frames = SubResource( 29 )
+frame = 1
+playing = true
+
+[node name="Label2" type="Label" parent="mospike"]
+margin_left = 64.0
+margin_top = 88.0
+margin_right = 284.0
+margin_bottom = 107.0
+custom_fonts/font = SubResource( 30 )
+text = "press the button to shoot"
+
 [node name="flagwin" parent="." instance=ExtResource( 11 )]
 position = Vector2( 7136, 352 )
 win = "2"
@@ -196,9 +478,7 @@ anims/RESET = SubResource( 6 )
 anims/up_and_drop = SubResource( 7 )
 
 [node name="Player1" parent="." instance=ExtResource( 9 )]
-position = Vector2( 360, 352 )
-collision_layer = 3
-collision_mask = 3
+position = Vector2( 32, 336 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource( 14 )
@@ -231,10 +511,11 @@ texture = ExtResource( 4 )
 
 [node name="Control" type="Control" parent="HUD"]
 anchor_top = 0.738
-anchor_right = 1.178
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -3.05176e-05
-margin_right = -0.00012207
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="move_right" type="TouchScreenButton" parent="HUD/Control"]
 position = Vector2( 195, -4 )
@@ -247,8 +528,8 @@ __meta__ = {
 }
 
 [node name="jump" type="TouchScreenButton" parent="HUD/Control"]
-position = Vector2( 1050, 2 )
-scale = Vector2( 2, 2 )
+position = Vector2( 880, 23 )
+scale = Vector2( 1.5, 1.5 )
 normal = ExtResource( 23 )
 pressed = ExtResource( 24 )
 action = "jump"
@@ -262,6 +543,16 @@ scale = Vector2( 2.10938, 2.10938 )
 normal = ExtResource( 21 )
 pressed = ExtResource( 22 )
 action = "left"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="shootbrick" type="TouchScreenButton" parent="HUD/Control"]
+position = Vector2( 752, 23 )
+scale = Vector2( 1.5, 1.5 )
+normal = ExtResource( 27 )
+pressed = ExtResource( 28 )
+action = "brick"
 __meta__ = {
 "_edit_lock_": true
 }
@@ -353,9 +644,21 @@ position = Vector2( 4064, 360 )
 
 [node name="mobsmini" parent="entitymods" instance=ExtResource( 18 )]
 position = Vector2( 4124, 392 )
-__meta__ = {
-"_edit_group_": true
-}
+
+[node name="mobspike" parent="entitymods" instance=ExtResource( 26 )]
+position = Vector2( 6936, 328 )
+
+[node name="Area" type="Area2D" parent="entitymods"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="entitymods/Area"]
+position = Vector2( 6376, 296 )
+shape = SubResource( 9 )
+
+[node name="mobsmini2" parent="entitymods" instance=ExtResource( 18 )]
+position = Vector2( 4904, 424 )
+
+[node name="Spikes" parent="." instance=ExtResource( 25 )]
+position = Vector2( 1888, 352 )
 
 [connection signal="body_entered" from="FallZoneNode/fallzone" to="FallZoneNode/fallzone" method="_on_fallzone_body_entered"]
 [connection signal="body_entered" from="FallZoneNode/fallzone2" to="FallZoneNode/fallzone2" method="_on_fallzone_body_entered"]
@@ -364,3 +667,4 @@ __meta__ = {
 [connection signal="coin_collected" from="coins/coin" to="HUD" method="_on_coin_coin_collected"]
 [connection signal="coin_collected" from="coins/coin2" to="flagwin" method="_on_coin_coin_collected"]
 [connection signal="coin_collected" from="coins/coin2" to="HUD" method="_on_coin_coin_collected"]
+[connection signal="body_entered" from="entitymods/Area" to="entitymods/mobspike" method="_on_Area_body_entered"]
